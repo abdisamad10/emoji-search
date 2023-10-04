@@ -1,7 +1,7 @@
 import React, { PureComponent } from "react";
 import Header from './Dashboard/Header/Header';
-import Searchbar from './Dashboard/Searchbar/SearchBar';
-import EmojisResult from './Dashboard/Emojis/EmojisResult';
+// import Searchbar from './Dashboard/Searchbar/SearchBar';
+// import EmojisResult from './Dashboard/Emojis/EmojisResult';
 
 
 export default class App extends PureComponent {
@@ -9,8 +9,8 @@ export default class App extends PureComponent {
     return (
       <div>
         <Header />
-        <Searchbar />
-        <EmojisResult />
+        {/* <Searchbar />
+        <EmojisResult /> */}
       </div>
     )
   }
