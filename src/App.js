@@ -11,11 +11,17 @@ export default class App extends PureComponent {
     filteredEmojis: Filter("", 20),
   };
 
+  handleChange = (event) => {
+      this.setState({
+        filteredEmojis: Filter(event.target.value, 15),
+      });
+  }
+
   render () {
     return (
       <div>
         <Header />
-        <Searchbar />
+        <Searchbar handleChange={this.handleChange}/>
         <EmojisResult emojiData={this.state.filteredEmojis}/>
       </div>
     )

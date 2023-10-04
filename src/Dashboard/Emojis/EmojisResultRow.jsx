@@ -1,4 +1,5 @@
 import { PureComponent } from "react";
+import './EmojisResultRow.css';
 
 export default class EmojiResultsRow extends PureComponent {
     render () {
@@ -6,12 +7,14 @@ export default class EmojiResultsRow extends PureComponent {
         const codePointHex = symbol.codePointAt(0).toString(16);
         const src = `//cdn.jsdelivr.net/emojione/assets/png/${codePointHex}.png`;
         return (
-          <div>
+          <div className="component-emoji-result-row copy-it"
+          data-clipboard-text={symbol}
+          >
 
             <img src={src} alt={title} />
             <span className="title">{title}</span>
             <span className="info">Click to Copy</span>
-            
+
           </div>
         )
     }

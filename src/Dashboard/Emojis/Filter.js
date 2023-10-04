@@ -7,6 +7,9 @@ function Filter(searchText, maxREsults) {
         ) {
             return true;
         }
+        if(emoji.keywords.includes(searchText)){
+            return true;
+        }
         return false;
     })
     .slice(0, maxREsults);
